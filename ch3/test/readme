@@ -1,1 +1,19 @@
-ce
+完整文档参见：https://github.com/mhuasong/AUBO-Robot-on-ROS/blob/master/ch3_v1.pdf
+在编写完test.cpp,存入src目录后，需要在CMakeLists.txt文件中增加几行：
+find_package(catkin REQUIRED COMPONENTS roscpp)
+...
+add_executable(myTest src/test.cpp)
+target_link_libraries(myTest ${catkin_LIBRARIES})
+
+在package.xml文件增加：
+  <build_depend>roscpp</build_depend>
+  <exec_depend>roscpp</exec_depend>
+然后再退出到catkin_ws目录下（第二章中，我们工程的顶级目录是ch2_2)，运行编译命令：
+catkin_make
+然后即可测试运行：
+按ctrl+alt+t打开两个终端,每个窗口都进入到工程的顶级目录，然后运行：
+source devel/setup.bash
+在其中一个窗口运行：
+roslaunch aubo_simulation display.launch
+另一个窗口运行测试程序myTest:
+rosrun aubo_simulation myTest
