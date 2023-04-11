@@ -12,7 +12,7 @@ code for example 2.7。
     catkin_create_pkg aubo_simulation
     cd aubo_simulation
     mkdir src urdf meshes launch rviz
-3) 第三步，拷贝文件到对应目录，包括从https://github/auboRobot网站拷贝aubo-i5对应的STL和DAE格式的CAD文件到meshes目录下的visual目录以及collision目录，aubo_i5.urdf文件到urdf目录。
+3) 第三步，拷贝文件到对应目录，包括从https://github.com/auboRobot网站拷贝aubo-i5对应的STL和DAE格式的CAD文件到meshes目录下的visual目录以及collision目录，aubo_i5.urdf文件到urdf目录。
 4）编写launch文件并运行测试
    display.launch文件内容：
    <launch>
