@@ -1,1 +1,5 @@
 第三章：运动学实验
+
+实验1：编写代码，测试ROS中的关节控制
+ROS工程延续上一章的实验，这一次只是在src目录下编写一个测试程序test.cpp
+这个测试的文档参见很久以前的一个实验文档：https://github.com/mhuasong/AUBO-Robot-on-ROS/blob/master/ch3_v1.pdf
