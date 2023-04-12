@@ -1,7 +1,7 @@
 code for example 2.7。
 1） 第一步，建立一个目录，比如ch2_2:
     mkdir ch2_2
-    cd ch2-2
+    cd ch2_2
     mkdir src
     cd src
     catkin_init_workspace
