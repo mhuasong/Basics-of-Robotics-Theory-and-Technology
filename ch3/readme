@@ -5,13 +5,13 @@ ROS工程延续上一章的实验，这一次只是在src目录下编写一个�
 这个测试的文档参见很久以前的一个实验文档：https://github.com/mhuasong/AUBO-Robot-on-ROS/blob/master/ch3_v1.pdf
 
 其他实验：
-      1. Test Foward Kinematics(MDH,Screw thoery,quaternion,dual quaternion).
-      2. Draw Monte carlo workspace.
-			3. Test Inverse Kinematics(Mixed Method).
-			4. Test Jacobian Inverse solution.
-			5. Test Newton Raphson Inverse solution.
-			6. TestCtraj MoveL(Cartesian trajectory).
-			7. TestJtraj moveC(Joint space trajectory).
-			8. Test Move point to point by Jtraj.
-			9. Test trajectory planning by B-spline.
-			10. Test trajectory planning by CatmullRom.
+	1. Test Foward Kinematics(MDH,Screw thoery,quaternion,dual quaternion).
+	2. Draw Monte carlo workspace.
+	3. Test Inverse Kinematics(Mixed Method).
+	4. Test Jacobian Inverse solution.
+	5. Test Newton Raphson Inverse solution.
+	6. TestCtraj MoveL(Cartesian trajectory).
+	7. TestJtraj moveC(Joint space trajectory).
+	8. Test Move point to point by Jtraj.
+	9. Test trajectory planning by B-spline.
+	10. Test trajectory planning by CatmullRom.
