@@ -3,3 +3,42 @@
 运动学相关算法代码在kinematics.cpp中，正运动学算法包括:SDH、MDH、旋量法、四元数法、对偶四元数法，逆运动学算法包括解析法（MDH）、几何法与解析法混合法、雅可比迭代、牛顿-拉夫森迭代。
 轨迹规划算法只包含了简单：直线插补（操作空间（末端坐标系）、关节空间（关节坐标系））、关节空间多项式插补算法（Quintic polynomial,Cubic polynomial,b-spline,CatmullRom)。
 kineSim.cpp为测试主程序。
+
+程序中除了自编的一个dual quaternion类之外，数学运算使用eigen库：
+所以我在ROS包的CMakeLists.txt里面增加几行Eigen的支持：
+include_directories("/home/mhs/eigen-3.3.8/Eigen"),这个包含路径根据下载后eigen安装的目录来定。
+
+......
+## Use the Eigen library
+find_package(cmake_modules REQUIRED) 
+find_package(Eigen3 REQUIRED) 
+include_directories(${EIGEN3_INCLUDE_DIR}) 
+add_definitions(${EIGEN_DEFINITIONS})
+
+增加了一行编译执行程序的规则：
+add_executable(kineSim src/kineSim.cpp src/kinematics.cpp)
+target_link_libraries(kineSim ${catkin_LIBRARIES})
+
+其余设置，包括ROS package的建立请参见前面章节的描述。
+catkin_make成功后，即可进行测试，在一个命令窗口中运行：
+mhs@ubuntu:~/catkin_ws/ch2_3$ source devel/setup.bash
+mhs@ubuntu:~/catkin_ws/ch2_3$ roslaunch aubo_simulation display.launch gui:=true
+启动ROS和rviz，加载机器人模型。
+在另一个窗口中运行测试程序：
+mhs@ubuntu:~/catkin_ws/ch2_3$ source devel/setup.bash
+mhs@ubuntu:~/catkin_ws/ch2_3$ rosrun aubo_simulation kineSim
+
+0. Exit.			
+1. Test Foward Kinematics(MDH,Screw thoery,quaternion,dual quaternion).		
+2. Draw Monte carlo workspace.			
+3. Test Inverse Kinematics(Mixed Method).			
+4. Test Jacobian Inverse solution.			
+5. Test Newton Raphson Inverse solution.			
+6. TestCtraj MoveL(Cartesian trajectory).			
+7. TestJtraj moveC(Joint space trajectory).			
+8. Test Move point to point by Jtraj.			
+9. Test trajectory planning by B-spline.			
+10. Test trajectory planning by CatmullRom.			
+   Please input your command:
+   
+程序并未经过严格测试，仅供课程学习参考。
