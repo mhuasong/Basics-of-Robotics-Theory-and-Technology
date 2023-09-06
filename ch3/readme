@@ -1,5 +1,7 @@
 第三章：运动学实验
 
+1. 串联机械臂运动学实验
+
 起步实验：编写代码，测试ROS中的关节控制（示范代码位于test目录下）
 ROS工程延续上一章的实验，这一次只是在src目录下编写一个测试程序test.cpp
 这个测试的文档参见很久以前的一个实验文档：https://github.com/mhuasong/AUBO-Robot-on-ROS/blob/master/ch3_v1.pdf
@@ -15,3 +17,6 @@ ROS工程延续上一章的实验，这一次只是在src目录下编写一个�
 	8. Test Move point to point by Jtraj.
 	9. Test trajectory planning by B-spline.
 	10. Test trajectory planning by CatmullRom.
+
+2. 并联机器人Delta运动学实验
+   该部分实验测试代码由博士生王琪编写，位于目录delta_robot目录下
