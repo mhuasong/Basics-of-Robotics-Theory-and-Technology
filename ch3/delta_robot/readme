@@ -1,0 +1,18 @@
+code for delta robot
+1) 第一步，创建ROS package:delta_robot
+    cd catkin_ws/src
+    catkin_create_pkg delta_robot
+    cd delta_robot
+    mkdir src meshes urdf rviz launch
+3) 第三步，拷贝文件到对应目录，包括从https://github.com/serrauvic/ros_delta_robot/tree/master/delta_robot_support 网站拷贝delta对应的STL和DAE格式的CAD文件到meshes目录，delta_robot.urdf文件到urdf目录。
+   (*注意修改delta_robot.urdf里面的文件路径)
+4）编写launch文件并运行测试
+
+  返回到catkin_ws目录下运行编译命令：
+  catkin_make
+  加载ROS包的运行环境：
+  source devel/setup.bash
+  运行测试命令：
+  roslaunch delta_robot display.launch gui:= true
+  运行正运动学测试命令
+  rosrun delta_robot kinematics.py
