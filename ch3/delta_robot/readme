@@ -13,6 +13,6 @@ code for delta robot
   加载ROS包的运行环境：
   source devel/setup.bash
   运行测试命令：
-  roslaunch delta_robot display.launch gui:= true
+  roslaunch delta_robot display.launch gui:=true
   运行正运动学测试命令
   rosrun delta_robot kinematics.py
