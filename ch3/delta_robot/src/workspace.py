@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# goal: create delta robot workspace from restrictions
 
 import sys
 from math import pi
 import numpy
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-from kinematics import forward, inverse
+from kinematics import forward
 
 
 def plot_delta(ws):
@@ -17,13 +16,11 @@ def plot_delta(ws):
 
     fig = plt.figure()
     ax = plt.axes(projection='3d')
-    my_cmap = plt.get_cmap('hsv')
-    plotws = ax.scatter(x, y, z, alpha=0.8, c=z, cmap=my_cmap, marker='.', s=0.5)
+    ax.scatter(x, y, z, alpha=0.8, c=z, marker='.', s=0.5)
     ax.set_xlabel('X [m]')
     ax.set_ylabel('Y [m]')
     ax.set_zlabel('Z [m]')
     ax.title.set_text('Delta Robot Workspace')
-    fig.colorbar(plotws, ax=ax, shrink=0.5, aspect=5)
 
     # Front view XY
     plt.figure()
