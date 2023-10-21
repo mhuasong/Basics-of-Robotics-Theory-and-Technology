@@ -1,0 +1,27 @@
+<launch>
+
+<arg name="model" default="$(find differential_wmr)/urdf/dif.xacro"/>
+<arg name="rvizconfig" default="$(find differential_wmr)/config/urdf.rviz"/>
+
+<!-- Launch gazebo -->
+<include file="$(find differential_wmr)/launch/gaz.launch">
+  <arg name="model" value="$(arg model)"/>
+</include>
+
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)"/>
+
+<!-- Load joint controller configuration from YAML file to parameter server -->
+<rosparam file="$(find differential_wmr)/config/wheel_controller.yaml" command="load"/>
+<rosparam file="$(find differential_wmr)/config/differential_controller.yaml" command="load"/>
+
+<!-- load the controllers -->
+<node name="rdif_control_spawner" pkg="controller_manager" type="spawner"
+  respawn="true" output="screen" 
+   args="joint_state_controller mobile_base_controller"/>
+
+<!-- convert joint states to TF transforms for rviz, etc -->
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+</node>
+
+</launch>
