@@ -31,7 +31,4 @@ code for three wheeled omnidirectional robot
   发送rostopic:
   rostopic pub /joint_states sensor_msgs/JointState '{header: {stamp: now, frame_id: ''},name: [ 'origin_joint', 'left_rim_joint', 'left_roller_e_joint', 'left_roller_ne_joint', 'left_roller_n_joint', 'left_roller_nw_joint', 'left_roller_w_joint', 'left_roller_sw_joint', 'left_roller_s_joint', 'left_roller_se_joint', 'back_rim_joint', 'back_roller_e_joint', 'back_roller_ne_joint',  'back_roller_n_joint', 'back_roller_nw_joint', 'back_roller_w_joint', 'back_roller_sw_joint', 'back_roller_s_joint', 'back_roller_se_joint', 'right_rim_joint', 'right_roller_e_joint', 'right_roller_ne_joint', 'right_roller_n_joint', 'right_roller_nw_joint', 'right_roller_w_joint', 'right_roller_sw_joint', 'right_roller_s_joint', 'right_roller_se_joint'],position:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0], velocity:[], effort:[]}' --once
   gazebo运动控制仿真请参见教程pdf文档
-<video width="320" height="240" controls>
-    <source src="/video/simple_cmd.mp4" type="video/mp4">
-    <img src="simple_cmd.jpg">
-</video
+![](video/simple_cmd.mp4)
