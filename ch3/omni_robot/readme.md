@@ -1,4 +1,4 @@
-- code for three wheeled omnidirectional robot
+- 三轮全向移动机器人模型加载及运动仿真实验步骤：
 - 1) 第一步，创建ROS package:omni_robot
 -    cd catkin_ws/src
 -    catkin_create_pkg omni_robot
