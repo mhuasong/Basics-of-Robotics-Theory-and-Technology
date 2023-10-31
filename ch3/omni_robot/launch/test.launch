@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+	<include file="$(find omni_robot)/launch/gaz.launch" />
+		
+
+	<!-- Load controllers -->
+	 <rosparam file="$(find omni_robot)/config/joint_velocity.yaml" command="load"/> 
+
+	<!-- Controllers-->
+	<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/omni_robot" 
+	args="--namespace=/omni_robot
+	joint_state_controller
+	left_joint_velocity_controller
+	back_joint_velocity_controller
+	right_joint_velocity_controller
+	"/>
+
+
+</launch>
