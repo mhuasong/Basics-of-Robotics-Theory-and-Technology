@@ -6,7 +6,7 @@
 -    mkdir src meshes urdf rviz launch
 - 2) 第二步，拷贝文件到对应目录，包括从https://github.com/GuiRitter/OpenBase 网站拷贝omnidirectional robot对应的STL和DAE格式的CAD文件到meshes目录，description.rviz文件到rviz目录，description.urdf文件到urdf目录。
 -   (*注意修改description.urdf里面的文件路径)
-- 4）编写launch文件并运行测试
+- 3）编写launch文件并运行测试
 -    display.launch文件内容：
 - `<launch>`
 -
