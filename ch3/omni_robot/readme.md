@@ -8,20 +8,20 @@
 -   (*注意修改description.urdf里面的文件路径)
 - 4）编写launch文件并运行测试
 -    display.launch文件内容：
-- <launch>
+- `<launch>`
 -
--   <arg name="model" />
--   <arg name="gui" default="True" />
+-  ` <arg name="model" />`
+-   `<arg name="gui" default="True" />`
 - 
--   <!-- Load the URDF to the parameter server -->
--   <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find omni_robot)/urdf/description.urdf'" />
--   <!--param name="use_gui" value="$(arg gui)" /-->
+-   `<!-- Load the URDF to the parameter server -->`
+-   `<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find omni_robot)/urdf/description.urdf'" />`
+-   `<!--param name="use_gui" value="$(arg gui)" /-->`
 - 
--   <!--node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /-->
--   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
--   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find omni_robot)/rviz/description.rviz" required="true" />
+-   `<!--node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /-->`
+-   `<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />`
+-   `<node name="rviz" pkg="rviz" type="rviz" args="-d $(find omni_robot)/rviz/description.rviz" required="true" />`
 - 
-- </launch>
+- `</launch>`
 -   将launch文件存放到launch目录。返回到catkin_ws目录下运行编译命令：
 -   catkin_make
 -   加载ROS包的运行环境：
