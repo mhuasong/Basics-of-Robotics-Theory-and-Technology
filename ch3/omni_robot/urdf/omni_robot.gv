@@ -1,0 +1,89 @@
+digraph G {
+node [shape=box];
+"origin_link" [label="origin_link"];
+"base_link" [label="base_link"];
+"back_rim_link" [label="back_rim_link"];
+"back_roller_e_link" [label="back_roller_e_link"];
+"back_roller_n_link" [label="back_roller_n_link"];
+"back_roller_ne_link" [label="back_roller_ne_link"];
+"back_roller_nw_link" [label="back_roller_nw_link"];
+"back_roller_s_link" [label="back_roller_s_link"];
+"back_roller_se_link" [label="back_roller_se_link"];
+"back_roller_sw_link" [label="back_roller_sw_link"];
+"back_roller_w_link" [label="back_roller_w_link"];
+"left_rim_link" [label="left_rim_link"];
+"left_roller_e_link" [label="left_roller_e_link"];
+"left_roller_n_link" [label="left_roller_n_link"];
+"left_roller_ne_link" [label="left_roller_ne_link"];
+"left_roller_nw_link" [label="left_roller_nw_link"];
+"left_roller_s_link" [label="left_roller_s_link"];
+"left_roller_se_link" [label="left_roller_se_link"];
+"left_roller_sw_link" [label="left_roller_sw_link"];
+"left_roller_w_link" [label="left_roller_w_link"];
+"right_rim_link" [label="right_rim_link"];
+"right_roller_e_link" [label="right_roller_e_link"];
+"right_roller_n_link" [label="right_roller_n_link"];
+"right_roller_ne_link" [label="right_roller_ne_link"];
+"right_roller_nw_link" [label="right_roller_nw_link"];
+"right_roller_s_link" [label="right_roller_s_link"];
+"right_roller_se_link" [label="right_roller_se_link"];
+"right_roller_sw_link" [label="right_roller_sw_link"];
+"right_roller_w_link" [label="right_roller_w_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"origin_link" -> "origin_joint" [label="xyz: 0 0 0.01905 \nrpy: 0 -0 0"]
+"origin_joint" -> "base_link"
+"base_link" -> "back_rim_joint" [label="xyz: 0 -0.04 0 \nrpy: 1.5708 -0 3.14159"]
+"back_rim_joint" -> "back_rim_link"
+"back_rim_link" -> "back_roller_e_joint" [label="xyz: 0.01355 0 0.0055 \nrpy: -1.5708 0 0"]
+"back_roller_e_joint" -> "back_roller_e_link"
+"back_rim_link" -> "back_roller_n_joint" [label="xyz: 0 0.01355 0.0055 \nrpy: -1.5708 1.11022e-16 1.5708"]
+"back_roller_n_joint" -> "back_roller_n_link"
+"back_rim_link" -> "back_roller_ne_joint" [label="xyz: 0.0095813 0.0095813 -0.0055 \nrpy: -1.5708 -5.55112e-17 0.785398"]
+"back_roller_ne_joint" -> "back_roller_ne_link"
+"back_rim_link" -> "back_roller_nw_joint" [label="xyz: -0.0095813 0.0095813 -0.0055 \nrpy: -1.5708 1.11022e-16 2.35619"]
+"back_roller_nw_joint" -> "back_roller_nw_link"
+"back_rim_link" -> "back_roller_s_joint" [label="xyz: 0 -0.01355 0.0055 \nrpy: -1.5708 -1.11022e-16 -1.5708"]
+"back_roller_s_joint" -> "back_roller_s_link"
+"back_rim_link" -> "back_roller_se_joint" [label="xyz: 0.0095813 -0.0095813 -0.0055 \nrpy: -1.5708 5.55112e-17 -0.785398"]
+"back_roller_se_joint" -> "back_roller_se_link"
+"back_rim_link" -> "back_roller_sw_joint" [label="xyz: -0.0095813 -0.0095813 -0.0055 \nrpy: -1.5708 -1.11022e-16 -2.35619"]
+"back_roller_sw_joint" -> "back_roller_sw_link"
+"back_rim_link" -> "back_roller_w_joint" [label="xyz: -0.01355 0 0.0055 \nrpy: -1.5708 -0 3.14159"]
+"back_roller_w_joint" -> "back_roller_w_link"
+"base_link" -> "left_rim_joint" [label="xyz: -0.034641 0.02 0 \nrpy: 1.5708 5.55112e-17 1.0472"]
+"left_rim_joint" -> "left_rim_link"
+"left_rim_link" -> "left_roller_e_joint" [label="xyz: 0.01355 0 0.0055 \nrpy: -1.5708 0 0"]
+"left_roller_e_joint" -> "left_roller_e_link"
+"left_rim_link" -> "left_roller_n_joint" [label="xyz: 0 0.01355 0.0055 \nrpy: -1.5708 1.11022e-16 1.5708"]
+"left_roller_n_joint" -> "left_roller_n_link"
+"left_rim_link" -> "left_roller_ne_joint" [label="xyz: 0.0095813 0.0095813 -0.0055 \nrpy: -1.5708 -5.55112e-17 0.785398"]
+"left_roller_ne_joint" -> "left_roller_ne_link"
+"left_rim_link" -> "left_roller_nw_joint" [label="xyz: -0.0095813 0.0095813 -0.0055 \nrpy: -1.5708 1.11022e-16 2.35619"]
+"left_roller_nw_joint" -> "left_roller_nw_link"
+"left_rim_link" -> "left_roller_s_joint" [label="xyz: 0 -0.01355 0.0055 \nrpy: -1.5708 -1.11022e-16 -1.5708"]
+"left_roller_s_joint" -> "left_roller_s_link"
+"left_rim_link" -> "left_roller_se_joint" [label="xyz: 0.0095813 -0.0095813 -0.0055 \nrpy: -1.5708 5.55112e-17 -0.785398"]
+"left_roller_se_joint" -> "left_roller_se_link"
+"left_rim_link" -> "left_roller_sw_joint" [label="xyz: -0.0095813 -0.0095813 -0.0055 \nrpy: -1.5708 -1.11022e-16 -2.35619"]
+"left_roller_sw_joint" -> "left_roller_sw_link"
+"left_rim_link" -> "left_roller_w_joint" [label="xyz: -0.01355 0 0.0055 \nrpy: -1.5708 -0 3.14159"]
+"left_roller_w_joint" -> "left_roller_w_link"
+"base_link" -> "right_rim_joint" [label="xyz: 0.034641 0.02 0 \nrpy: 1.5708 -5.55112e-17 -1.0472"]
+"right_rim_joint" -> "right_rim_link"
+"right_rim_link" -> "right_roller_e_joint" [label="xyz: 0.01355 0 0.0055 \nrpy: -1.5708 0 0"]
+"right_roller_e_joint" -> "right_roller_e_link"
+"right_rim_link" -> "right_roller_n_joint" [label="xyz: 0 0.01355 0.0055 \nrpy: -1.5708 1.11022e-16 1.5708"]
+"right_roller_n_joint" -> "right_roller_n_link"
+"right_rim_link" -> "right_roller_ne_joint" [label="xyz: 0.0095813 0.0095813 -0.0055 \nrpy: -1.5708 -5.55112e-17 0.785398"]
+"right_roller_ne_joint" -> "right_roller_ne_link"
+"right_rim_link" -> "right_roller_nw_joint" [label="xyz: -0.0095813 0.0095813 -0.0055 \nrpy: -1.5708 1.11022e-16 2.35619"]
+"right_roller_nw_joint" -> "right_roller_nw_link"
+"right_rim_link" -> "right_roller_s_joint" [label="xyz: 0 -0.01355 0.0055 \nrpy: -1.5708 -1.11022e-16 -1.5708"]
+"right_roller_s_joint" -> "right_roller_s_link"
+"right_rim_link" -> "right_roller_se_joint" [label="xyz: 0.0095813 -0.0095813 -0.0055 \nrpy: -1.5708 5.55112e-17 -0.785398"]
+"right_roller_se_joint" -> "right_roller_se_link"
+"right_rim_link" -> "right_roller_sw_joint" [label="xyz: -0.0095813 -0.0095813 -0.0055 \nrpy: -1.5708 -1.11022e-16 -2.35619"]
+"right_roller_sw_joint" -> "right_roller_sw_link"
+"right_rim_link" -> "right_roller_w_joint" [label="xyz: -0.01355 0 0.0055 \nrpy: -1.5708 -0 3.14159"]
+"right_roller_w_joint" -> "right_roller_w_link"
+}
