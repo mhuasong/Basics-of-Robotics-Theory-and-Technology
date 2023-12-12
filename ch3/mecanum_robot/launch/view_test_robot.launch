@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- robot spawn parameters -->
+  <arg name="robot_namespace" default="/" />
+  <arg name="model" default="$(find mecanum_robot)/urdf/test_robot.urdf.xacro"/>
+  <arg name="gui" default="false" />
+  <arg name="rvizconfig" default="$(find mecanum_robot)/rviz/view_test_robot.rviz" />
+  
+  <!-- load robot urdf -->
+  <param name="robot_description"
+    command="$(find xacro)/xacro $(arg model) --inorder" />
+  <param name="use_gui" value="$(arg gui)" />
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"
+    respawn="false" output="screen" />
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen" />
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)"
+    respawn="false" output="screen" />
+
+</launch>
