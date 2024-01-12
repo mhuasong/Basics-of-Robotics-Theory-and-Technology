@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:include filename="$(find omni3ros_pkg)/urdf/roller.urdf.xacro"/>
+<xacro:include filename="$(find omni_robot)/urdf/roller.urdf.xacro"/>
 
 <xacro:macro
 	name="rim_macro"
