@@ -7,7 +7,6 @@ Source code and slides for the textbook written by Huasong Min: The Basics of Ro
 # ch2:
 	ch2_1.cpp: 教材第二章位形表示法之间的转换，包括RPY法、旋量法、四元数法、Rodrigues参数法。
 	ex2_7: Aubo协作机器人在ROS下的建模。
-#
 # ch3:
 	delta_robot: 并联机器人Delta运动学实验。
 	differential_wmr: 带小脚轮的两轮差分驱动移动机器人运动学参考实验。
@@ -15,15 +14,11 @@ Source code and slides for the textbook written by Huasong Min: The Basics of Ro
 	mecanum_robot: 四轮全向移动全向移动机器人运动学实验。
 	omni_robot: 三轮全向移动机器人运动学实验。	
 	test: Aubo协作机械臂运动学仿真测试实验。
-#
 # ch4: 	
 	第四章机器人正逆动力学实验(RNEA、ABA算法）。
-#
 # ch5:	
 	运动规划的算法网络开源代码推荐，Atsushi Sakai等人的开源python代码在我的github下也有fork。
-#
 # mhsRobotParser:
 	教材第7章机器人编程语言解析器设计的开源代码示范。
-#
 # ppt:
 	本人编写的教材讲义初稿。
