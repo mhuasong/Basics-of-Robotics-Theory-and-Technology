@@ -1,5 +1,6 @@
 # Basics-of-Robotics-Theory-and-Technology
 Source code and slides for the textbook written by Huasong Min: The Basics of Robotics Theory and Technology
+# 注：教材已由机械工业出版社出版，新的教案、讲义、PPT可以下载：http://www.cmpedu.com/ziyuans/ziyuan/120274.htm
 #
 # 教材《机器人理论与技术基础》章节实验代码、课堂讲义及说明
 # 
