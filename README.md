@@ -19,6 +19,8 @@ Source code and slides for the textbook written by Huasong Min: The Basics of Ro
 	第四章机器人正逆动力学实验(RNEA、ABA算法）。
 # ch5:	
 	运动规划的算法网络开源代码推荐，Atsushi Sakai等人的开源python代码在我的github下也有fork。
+# ch6:
+	动力学参数辨识实验参考。
 # mhsRobotParser:
 	教材第7章机器人编程语言解析器设计的开源代码示范。
 # ppt:
